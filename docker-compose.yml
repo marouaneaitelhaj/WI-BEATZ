@@ -1,12 +1,12 @@
 services:
   postgres:
-    image: postgres:12
+    image: postgres
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: wibeatz
-      POSTGRES_PASSWORD: wibeatz
-      POSTGRES_DB: wibeatz
+      POSTGRES_USER: wiparking
+      POSTGRES_PASSWORD: wiparking
+      POSTGRES_DB: wiparking
     volumes:
       - ./data:/var/lib/postgresql/data
     networks:
@@ -16,10 +16,11 @@ services:
     ports:
       - "5050:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: wibeatz@wibeatz.com
-      PGADMIN_DEFAULT_PASSWORD: wibeatz
+      PGADMIN_DEFAULT_EMAIL: wiparking@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: wiparking
     volumes:
       - ./pgadmin:/var/lib/pgadmin
+
     networks:
       - postgres
     depends_on:

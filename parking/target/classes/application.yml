@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: parking
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wiparking
+    username: wiparking
+    password: wiparking
+    driver-class-name: org.postgresql.Driver
